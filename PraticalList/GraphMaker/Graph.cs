@@ -46,8 +46,10 @@ namespace GraphMaker
             Edge edge = new Edge(weight, origin, destiny);
 
             edge.v1.addAdjacent(edge.v2);
+            edge.v2.addAdjacent(edge.v1);
 
             vertexes[vertexes.IndexOf(origin)] = edge.v1;
+            vertexes[vertexes.IndexOf(destiny)] = edge.v2;
             edges.Add(edge);
         }
 

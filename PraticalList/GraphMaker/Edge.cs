@@ -9,7 +9,7 @@
         public Edge()
         {
             this.v1 = new Vertex();
-            this.v1 = new Vertex();
+            this.v2 = new Vertex();
             this.weight = 0;
         }
 
