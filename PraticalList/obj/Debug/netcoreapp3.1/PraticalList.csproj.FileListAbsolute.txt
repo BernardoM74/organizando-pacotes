@@ -11,3 +11,16 @@ C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\PraticalList\Prati
 C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\PraticalList\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.dll
 C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\PraticalList\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.pdb
 C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\PraticalList\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.genruntimeconfig.cache
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\bin\Debug\netcoreapp3.1\PraticalList.exe
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\bin\Debug\netcoreapp3.1\PraticalList.deps.json
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\bin\Debug\netcoreapp3.1\PraticalList.runtimeconfig.json
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\bin\Debug\netcoreapp3.1\PraticalList.runtimeconfig.dev.json
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\bin\Debug\netcoreapp3.1\PraticalList.dll
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\bin\Debug\netcoreapp3.1\PraticalList.pdb
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.csprojAssemblyReference.cache
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.csproj.CoreCompileInputs.cache
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.AssemblyInfoInputs.cache
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.AssemblyInfo.cs
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.dll
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.pdb
+C:\Users\berna\OneDrive\Documentos\PUCSG\Grafos\lista_pratica\organizando-pacotes\PraticalList\obj\Debug\netcoreapp3.1\PraticalList.genruntimeconfig.cache
