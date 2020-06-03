@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\berna\\OneDrive\\Documentos\\PUCSG\\Grafos\\lista_pratica\\PraticalList\\PraticalList\\PraticalList.csproj",
+      "projectUniqueName": "C:\\Users\\berna\\OneDrive\\Documentos\\PUCSG\\Grafos\\lista_pratica\\organizando-pacotes\\PraticalList\\PraticalList.csproj",
       "projectName": "PraticalList",
-      "projectPath": "C:\\Users\\berna\\OneDrive\\Documentos\\PUCSG\\Grafos\\lista_pratica\\PraticalList\\PraticalList\\PraticalList.csproj",
+      "projectPath": "C:\\Users\\berna\\OneDrive\\Documentos\\PUCSG\\Grafos\\lista_pratica\\organizando-pacotes\\PraticalList\\PraticalList.csproj",
       "packagesPath": "C:\\Users\\berna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\berna\\OneDrive\\Documentos\\PUCSG\\Grafos\\lista_pratica\\PraticalList\\PraticalList\\obj\\",
+      "outputPath": "C:\\Users\\berna\\OneDrive\\Documentos\\PUCSG\\Grafos\\lista_pratica\\organizando-pacotes\\PraticalList\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\berna\\AppData\\Roaming\\NuGet\\NuGet.Config",

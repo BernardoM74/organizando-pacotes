@@ -7,8 +7,8 @@ namespace GraphMaker
     {
         public string Id { get; set; }
         public List<Vertex> adjacents;
-        public string color;
 
+        public string color;
         public int Key { get; set; }
         public Vertex Parent { get; set; }
 
