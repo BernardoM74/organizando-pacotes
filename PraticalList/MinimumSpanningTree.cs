@@ -77,7 +77,6 @@ namespace PraticalList
 
         public void Kruskal() {
             spanningTreeVertex.Add(rootVertex);
-            Edge lightestEdge;
 
             while (spanningTreeEdges.Count < allVertex.Count - 1) {
             }

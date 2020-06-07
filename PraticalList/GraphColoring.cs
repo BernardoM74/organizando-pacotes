@@ -29,7 +29,6 @@ namespace PraticalList
 
             foreach( Edge e in graph.edges)
             {
-                Console.WriteLine("( "+e.v1.Id+ ", "+e.v2.Id + ")\n Materia = "+e.Id);
                 edgeColoring(e.v1, e.v2, e);
             }
 
@@ -82,8 +81,10 @@ namespace PraticalList
                 {
                     Edge toReceiveColor = professor.edges.Find(edge => edge.v1.Id == professor.Id
                     && edge.v2.Id == period.Id && edge.Id == discipline.Id);
-
                     toReceiveColor.Color = color;
+                    Console.WriteLine("\nPROFESSOR: " + professor.Id);
+                    Console.WriteLine("PERIODO: " + period.Id);
+                    Console.WriteLine("DISCIPLINA: {0} - COLOR: {1}\n", discipline.Id, toReceiveColor.Color);
                     return;
                 }
             }

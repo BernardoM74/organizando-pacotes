@@ -17,30 +17,8 @@ namespace PraticalList
             string fileName = "dados_ti.txt";
             createVertexFromFile(fileName);
 
-            //graph.createVertex("a");
-            //graph.createVertex("b");
-            //graph.createVertex("c");
-            //graph.createVertex("d");
-            //graph.createVertex("e");
-
-            //graph.addEdge("a", "b", 0);
-            //graph.addEdge("a", "c", 0);
-            //graph.addEdge("b", "d", 0);
-            //graph.addEdge("c", "d", 0);
-            //graph.addEdge("d", "e", 0);
-
             GraphColoring gc = new GraphColoring("edge", graph);
             gc.start();
-            graph.printColors();
-
-            //GraphColoring gc = new GraphColoring("vertex", graph);
-            //gc.start();
-            //gc.print();
-            //Console.WriteLine("Número cromático: "+gc.ChromaticNumber);
-
-            //MinimumSpanningTree mst = new MinimumSpanningTree(graph, "a");
-            //mst.Prim();
-
         }
 
         public static void createVertexFromFile (string fileName)

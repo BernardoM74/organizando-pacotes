@@ -72,21 +72,18 @@ namespace GraphMaker
             {
                 if (v.Id.Length != 1)
                 {
-                    Console.Write(v.Id + " conecta no ");
+                    Console.WriteLine("\n"+ v.Id + ": ");
                     v.adjacents.ForEach(delegate (Vertex adj)
                     {
-                        Console.Write(adj.Id + ", ");
+                        Console.WriteLine("PERIODO: " + adj.Id);
                         if (adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
                                         edge.v2.Id == v.Id && edge.v1.Id == adj.Id) != null)
                         {
-                            Console.WriteLine("Com a cor " + adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
-                                     edge.v2.Id == v.Id && edge.v1.Id == adj.Id).Color);
-                            Console.WriteLine(" e a disciplina " + adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
+                            Console.Write("DISCIPLINA: " + adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
                                      edge.v2.Id == v.Id && edge.v1.Id == adj.Id).Id);
-                        }
-                        else
-                        {
-                            Console.WriteLine("Com nenhuma cor.");
+
+                            Console.WriteLine(" - COR " + adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
+                                     edge.v2.Id == v.Id && edge.v1.Id == adj.Id).Color + "\n");
                         }
                     });
                 }
