@@ -18,10 +18,13 @@ namespace GraphMaker
 
         public void createVertex(string id)
         {
-            vertexes.Add(new Vertex(id));
+            if (vertexes.Find(vertex => vertex.Id == id) == null)
+            {
+                vertexes.Add(new Vertex(id));
+            }
         }
 
-        public void addEdge(string originId, string destinyId, int weight)
+        public void addEdge(string originId, string destinyId, int weight, string idNewEdge)
         {
             try
             {
@@ -30,10 +33,10 @@ namespace GraphMaker
 
                 if (directed)
                 {
-                    addDirectedEdge(weight, v1, v2);
+                    addDirectedEdge(weight, v1, v2, idNewEdge);
                     return;
                 }
-                addUndirectedEdge(weight, v1, v2);
+                addUndirectedEdge(weight, v1, v2, idNewEdge);
             }
             catch (KeyNotFoundException notFound)
             {
@@ -41,26 +44,53 @@ namespace GraphMaker
             }
         }
 
-        private void addUndirectedEdge(int weight, Vertex origin, Vertex destiny)
+        private void addUndirectedEdge(int weight, Vertex origin, Vertex destiny, string idNewEdge)
         {
-            Edge edge = new Edge(weight, origin, destiny);
+            Edge edge = new Edge(weight, origin, destiny, idNewEdge, "BRANCO");
 
-            edge.v1.addAdjacent(edge.v2);
-            edge.v2.addAdjacent(edge.v1);
+            edge.v1.addAdjacent(edge.v2, edge);
+            edge.v2.addAdjacent(edge.v1, edge);
 
             vertexes[vertexes.IndexOf(origin)] = edge.v1;
             vertexes[vertexes.IndexOf(destiny)] = edge.v2;
             edges.Add(edge);
         }
 
-        private void addDirectedEdge(int weight, Vertex origin, Vertex destiny)
+        private void addDirectedEdge(int weight, Vertex origin, Vertex destiny, string idNewEdge)
         {
-            Edge edge = new Edge(weight, origin, destiny);
+            Edge edge = new Edge(weight, origin, destiny, idNewEdge, "BRANCO");
 
-            edge.v1.addAdjacent(edge.v2);
+            edge.v1.addAdjacent(edge.v2, edge);
 
             vertexes[vertexes.IndexOf(origin)] = edge.v1;
             edges.Add(edge);
+        }
+
+        public void printColors()
+        {
+            vertexes.ForEach(delegate (Vertex v)
+            {
+                if (v.Id.Length != 1)
+                {
+                    Console.Write(v.Id + " conecta no ");
+                    v.adjacents.ForEach(delegate (Vertex adj)
+                    {
+                        Console.Write(adj.Id + ", ");
+                        if (adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
+                                        edge.v2.Id == v.Id && edge.v1.Id == adj.Id) != null)
+                        {
+                            Console.WriteLine("Com a cor " + adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
+                                     edge.v2.Id == v.Id && edge.v1.Id == adj.Id).Color);
+                            Console.WriteLine(" e a disciplina " + adj.edges.Find(edge => edge.v1.Id == v.Id && edge.v2.Id == adj.Id ||
+                                     edge.v2.Id == v.Id && edge.v1.Id == adj.Id).Id);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Com nenhuma cor.");
+                        }
+                    });
+                }
+            });
         }
 
         public void print()
@@ -68,20 +98,48 @@ namespace GraphMaker
             vertexes.ForEach(delegate (Vertex v)
             {
                 Console.WriteLine("Vertex = " + v.Id);
-                Console.Write("Adjacents = ");
-                v.adjacents.ForEach(delegate (Vertex adjacent)
+                Console.Write("\t\tAdjacents = ");
+                if (v.adjacents.Count == 0)
                 {
-                    if (adjacent != null)
+                    Console.WriteLine("Vertex " + v.Id + " doesn't have any adjacents.");
+                }
+                else
+                {
+                    v.adjacents.ForEach(delegate (Vertex adjacent)
                     {
                         Console.Write(adjacent.Id + " ");
-                    }
-                    else
-                    {
-                        Console.Write("Vertex " + v.Id + " doesn't have adjacent.");
-                    }
-                });
-                Console.WriteLine("\n");
+                    });
+                    Console.WriteLine("");
+                }
+                Console.WriteLine("\t\tColor = " + v.Color);
+
             });
+            Console.WriteLine("");
+        }
+
+        public void printWithContext()
+        {
+            vertexes.ForEach(delegate (Vertex v)
+            {
+                if (v.Id.Length == 1)
+                {
+                    Console.Write(v.Id + "º periodo tem aula com: ");
+                    v.adjacents.ForEach(delegate (Vertex v)
+                    {
+                        Console.Write(v.Id + ", ");
+                    });
+                }
+                else
+                {
+                    Console.Write(v.Id + " da aula para o(s) periodos: ");
+                    v.adjacents.ForEach(delegate (Vertex v)
+                    {
+                        Console.Write(v.Id + "º, ");
+                    });
+                }
+                Console.WriteLine();
+            });
+            Console.WriteLine("\n");
         }
     }
 }
